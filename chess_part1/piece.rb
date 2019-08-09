@@ -1,10 +1,18 @@
+
+
+
 class Piece
+  include Slideable
 
 
-  def initialize(pos)
+  attr_reader :pos
+  def initialize(color, board, pos)
+    @color = color
     @pos = pos
+    @board = board
   end
 
+  
 
   def to_s
   end
@@ -13,9 +21,11 @@ class Piece
   end
 
   def valid_moves
+
   end
 
   def pos=(val)
+    @pos = val
   end
 
   def symbol
